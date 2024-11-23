@@ -58,35 +58,30 @@
   resize: none;
 }
 
-
-
 input:focus,
 textarea:focus {
   border-color: rgb(129, 179, 222);
   box-shadow: 
-  0 0 8px 2px rgba(219, 125, 219, 0.6),
+    0 0 8px 2px rgba(219, 125, 219, 0.6),
     0 0 8px 2px rgba(129, 179, 222, 0.8); 
-    
   outline: none; 
 }
+
 input::placeholder,
 textarea::placeholder {
   color: #888;
 }
 
-.par{
+.par {
   text-align: left;
   color: #888;
 }
 
-.par0{
+.par0 {
   text-align: left;
   color: #888;
   margin-bottom: 20px;
 }
-
-
-
 
 .submitButton {
   font-size: 1.2rem;
@@ -137,4 +132,44 @@ textarea::placeholder {
   transform: scale(1.2);
   background-color: #fff;
   color: #000;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logoSection,
+  .contactForm,
+  .socialLinks {
+    max-width: 100%;
+    flex: none;
+    margin-bottom: 2rem;
+  }
+
+  .contactForm h3,
+  .socialLinks h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .input,
+  .textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .submitButton {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
 }
