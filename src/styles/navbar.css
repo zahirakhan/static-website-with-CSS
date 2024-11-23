@@ -1,0 +1,97 @@
+
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+.header .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.header .logo img {
+  height: 100px;
+  width: auto;
+  margin-bottom: 1rem; 
+  object-fit: contain;
+ 
+}
+
+
+
+.header .menu ul {
+  list-style: none;
+  padding: 10px 0 0 0 ;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+
+}
+
+.header .menu li {
+  font-size: 1.2rem;
+  position: relative; 
+}
+
+.header .menu a {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.header .menu a:hover {
+  background: linear-gradient(to right, rgb(129, 179, 222),rgb(219, 125, 219));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1); 
+}
+
+.header .menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(129, 179, 222),rgb(219, 125, 219));
+  transition: width 0.3s ease;
+}
+
+
+.header .menu li:hover::after {
+  width: 100%; 
+}
+
+.line-container {
+  text-align: center; 
+}
+
+.line {
+  width: 0; 
+  height: 1px; 
+  background-color: rgb(255, 255, 255); 
+  border: none;
+  margin: 0px auto; 
+  animation: lineGrow 4s ease-in-out forwards; 
+}
+
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%; 
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .menu li{
+    font-size: 12px;
+  }
+}
